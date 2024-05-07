@@ -143,8 +143,6 @@ class ManageUser:
                 self.search.get(), self.search.get(), self.search.get(), self.search.get(), self.search.get()))
 
         else:
-            self.connection(
-                )
             self.result = self.engine.getAll("SELECT id, IF(id_rol_fk = 1, 'admin', 'player') AS 'tex_rol', tex_user, tex_password FROM UserInformation WHERE bit_enable = 1;")
 
         # Se muestran los registros en la tabla.
